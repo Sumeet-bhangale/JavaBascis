@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<div style="text-align: right;">
+
+	<a href="home">Home Page</a> &nbsp;&nbsp;| &nbsp;&nbsp; <a
+		href="improved-query-statement-demo">QUERY DEMO(List all Product)</a>
+
+	&nbsp;&nbsp;| &nbsp;&nbsp; <a href="insert-prepared-statement-demo">PREPARED
+		STATEMENT DEMO (INSERT/UPDATE)</a> &nbsp;&nbsp;| &nbsp;&nbsp; <a
+		href="callable-statement-demo">CALLABLE STATEMENT DEMO</a>
+
+	&nbsp;&nbsp;| &nbsp;&nbsp;
+
+</div>
+
+<hr>
+
+<br>
+<br>
+QUERY DEMO(Detail a single product)
+<form action="product-details" method="post">
+	Input a product ID <input name="ID"> <input type="submit">
+</form>
+
+
+<br>
+<br>
+INSERT NEW PRODUCT DEMO
+<form action="insert-product" method="post">
+	<br>Input a product name <input name="name"> 
+	<br>Input a product price <input name="price"> 
+								<input type="submit">
+</form>
+
+
+<br><br>
+INSERT NEW PRODUCT USING PREPARED STATEMENT DEMO
+<form action="insert-product-prepared-statement" method="post">
+	<br>Input a product name <input name="name">
+	<br>Input a product price <input name="price">
+	<input type="submit">
+</form>
+
+
+<br><br>
+INSERT NEW PRODUCT USING CALLABLE STATEMENT DEMO
+<form action="callable-statement-demo" method="post">
+	<br>Input a product name <input name="name">
+	<br>Input a product price <input name="price">
+	<input type="submit">
+</form>
+
+
+
+<br><br>
+DELETE A PRODUCT DEMO
+<form action="delete-product" method="post">
+	Input a product ID <input name="ID">
+	<input type="submit">
+</form>
+
+
+<br><br>
+UPDATE A PRODUCT DEMO
+<form action="update-product" method="post">
+	Input a product ID <input name="ID">
+	<br>Input the new price <input name="price">
+	<input type="submit">
+</form>
+
