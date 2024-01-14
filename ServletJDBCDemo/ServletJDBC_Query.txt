@@ -1,0 +1,32 @@
+CREATE DATABASE ecommercedb;
+
+use ecommercedb;
+CREATE TABLE eproduct 
+(  ID bigint(20) NOT NULL AUTO_INCREMENT,
+  name varchar(100) DEFAULT NULL,
+  price decimal(10,2) DEFAULT NULL,
+  date_added timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (ID)
+) ;
+
+
+use ecommercedb;
+INSERT INTO eproduct VALUES (1,'HP Laptop ABC',21900.00,'2019-06-04 07:18:57'),(2,'Acer Laptop ABC',23300.00,'2019-06-04 07:19:07'),(3,'Lenovo Laptop ABC',33322.00,'2019-06-04 07:19:19');
+
+
+use ecommercedb;
+DELIMITER $$
+CREATE PROCEDURE add_product( IN in_name varchar(40), IN in_price decimal(10,2))
+INSERT INTO eproduct(name,price) VALUES (in_name, in_price);
+$$
+DELIMITER ;
+
+use ecommercedb;
+CALL add_product("Asus",10000.25);
+
+use ecommercedb;
+DELIMITER $$
+CREATE PROCEDURE list_products( )
+SELECT * FROM eproduct;
+$$
+DELIMITER ;
